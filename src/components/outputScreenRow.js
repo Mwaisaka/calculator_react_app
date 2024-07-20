@@ -1,9 +1,9 @@
 import React from 'react';
 
-const OutputScreenRow = () => {
+const OutputScreenRow = (props) => {
     return (
         <div className = "screen-row">
-            <input type="text" readOnly={true}/>
+            <input type="text" readOnly value={props.value}/>
         </div>
     );
 };
