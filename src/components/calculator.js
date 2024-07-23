@@ -25,7 +25,7 @@ class Calculator extends React.Component {
                     this.setState({answer: "Math Error" });
                 }
                 if(ans === undefined) this.setState({answer: "Math Error"});
-                else this.setState({answer: ans, question: this.state.question});
+                else this.setState({answer: ans, question: this.state.question});                
                 break;
         }        
       }
