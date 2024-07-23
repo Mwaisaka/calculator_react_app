@@ -39,6 +39,28 @@ class Calculator extends React.Component {
         this.setState({question: str});
         break;
       }
+      case "x²": {
+        if (this.state.question !== "") {
+            var num = parseFloat(this.state.question);
+            if (!isNaN(num)) {
+                this.setState({ answer: num * num });
+            } else {
+                this.setState({ answer: "Math Error" });
+            }
+        }
+        break;
+    }
+    case "√": {
+      if (this.state.question !== "") {
+          var num = parseFloat(this.state.question);
+          if (!isNaN(num)) {
+              this.setState({ answer: Math.sqrt(num) });
+          } else {
+              this.setState({ answer: "Math Error" });
+          }
+      }
+      break;
+  }
       default: {
         this.setState({question: (this.state.question+=value)});
         break;
@@ -79,6 +101,8 @@ class Calculator extends React.Component {
           <div className="button-row">
             <Button label={"0"} handleClick = {this.handleClick}/>
             <Button label={"="} handleClick = {this.handleClick}/>
+            <Button label={"x²"} handleClick = {this.handleClick}/>
+            <Button label={"√"} handleClick={this.handleClick} />
           </div>
         </div>
       </div>
