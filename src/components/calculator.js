@@ -25,7 +25,7 @@ class Calculator extends React.Component {
                     this.setState({answer: "Math Error" });
                 }
                 if(ans === undefined) this.setState({answer: "Math Error"});
-                else this.setState({answer: ans, question: ""});
+                else this.setState({answer: ans, question: this.state.question});
                 break;
         }        
       }
@@ -56,7 +56,7 @@ class Calculator extends React.Component {
             <Button label={"Clear"} handleClick = {this.handleClick}/>
             <Button label={"Delete"} handleClick = {this.handleClick}/>
             <Button label={"."} handleClick = {this.handleClick}/>
-            <Button label={"/"} handleClick = {this.handleClick}/>
+            <Button label={"÷"} handleClick = {this.handleClick}/>
           </div>
           <div className="button-row">
             <Button label={"7"} handleClick = {this.handleClick}/>
